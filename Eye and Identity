@@ -1,0 +1,11 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+# This line is essential for the HackerRank output format
+numpy.set_printoptions(legacy='1.13')
+
+# Read N and M
+n, m = map(int, input().split())
+
+# Use numpy.eye to create the N x M array with the main diagonal as 1s
+print(numpy.eye(n, m))
