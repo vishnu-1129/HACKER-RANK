@@ -1,0 +1,9 @@
+import numpy
+
+# Read the space-separated integers for both arrays
+A = numpy.array(input().split(), int)
+B = numpy.array(input().split(), int)
+
+# Compute and print results
+print(numpy.inner(A, B))
+print(numpy.outer(A, B))
