@@ -1,0 +1,18 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+# Read N (rows) and M (columns)
+n, m = map(int, input().split())
+
+# Read the N rows and create a NumPy array
+matrix = []
+for _ in range(n):
+    matrix.append(list(map(int, input().split())))
+
+my_array = numpy.array(matrix)
+
+# Print the Transpose
+print(numpy.transpose(my_array))
+
+# Print the Flattened array
+print(my_array.flatten())
