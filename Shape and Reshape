@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+# Read the space-separated input and convert to a list of integers
+arr = list(map(int, input().split()))
+
+# Convert the list to a NumPy array and reshape it to 3x3
+result = numpy.reshape(numpy.array(arr), (3, 3))
+
+print(result)
