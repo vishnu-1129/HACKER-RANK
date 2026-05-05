@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to 
+import numpy
+
+# Read N (rows) and M (columns)
+n, m = map(int, input().split())
+
+# Read the N rows into a list and convert to a NumPy array
+array = numpy.array([input().split() for _ in range(n)], int)
+
+# Step 1: Find the minimum values along axis 1 (row-wise)
+min_axis_1 = numpy.min(array, axis=1)
+
+# Step 2: Find the maximum of those minimum values
+result = numpy.max(min_axis_1)
+
+print(result)
