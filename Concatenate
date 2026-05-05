@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+# Read N, M, and P
+n, m, p = map(int, input().split())
+
+# Read the first N rows
+array_1 = []
+for _ in range(n):
+    array_1.append(list(map(int, input().split())))
+
+# Read the next M rows
+array_2 = []
+for _ in range(m):
+    array_2.append(list(map(int, input().split())))
+
+# Convert to NumPy arrays and concatenate along axis 0
+# axis=0 is the default, so it's optional but good for clarity
+result = numpy.concatenate((numpy.array(array_1), numpy.array(array_2)), axis=0)
+
+print(result)
