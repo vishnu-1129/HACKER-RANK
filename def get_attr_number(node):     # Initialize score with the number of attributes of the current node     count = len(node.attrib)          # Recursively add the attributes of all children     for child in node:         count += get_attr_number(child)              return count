@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+def substitute(match):
+    if match.group(0) == '&&':
+        return 'and'
+    return 'or'
+
+# Read number of lines
+for _ in range(int(input())):
+    # Read each line
+    line = input()
+    
+    # regex matches '&&' or '||' ONLY if preceded and followed by a space
+    # We use lookbehind (?<= ) and lookahead (?= ) for the spaces
+    pattern = r'(?<= )(&&|\|\|)(?= )'
+    
+    # Apply substitution twice to handle consecutive matches like ' && && '
+    line = re.sub(pattern, substitute, line)
+    line = re.sub(pattern, substitute, line)
+    
+    print(line)
