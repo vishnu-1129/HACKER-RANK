@@ -1,0 +1,10 @@
+
+
+def arrays(arr):
+    # complete this function
+    # use numpy.array
+    # Reverse the list using slicing [::-1]
+    # and convert it to a NumPy array with type float
+    return numpy.array(arr[::-1], float)
+
+
