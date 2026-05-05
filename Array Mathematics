@@ -1,0 +1,22 @@
+# Enter your code here. Read input from STDIN. Print output to 
+import numpy
+
+# Ensure output alignment matches HackerRank's legacy expectations
+numpy.set_printoptions(legacy='1.13')
+
+# Read dimensions N and M
+n, m = map(int, input().split())
+
+# Read array A (next N lines)
+a = numpy.array([input().split() for _ in range(n)], int)
+
+# Read array B (following N lines)
+b = numpy.array([input().split() for _ in range(n)], int)
+
+# Perform and print the operations in the specified order
+print(a + b)
+print(a - b)
+print(a * b)
+print(a // b)  # Integer (floor) division
+print(a % b)
+print(a ** b)
