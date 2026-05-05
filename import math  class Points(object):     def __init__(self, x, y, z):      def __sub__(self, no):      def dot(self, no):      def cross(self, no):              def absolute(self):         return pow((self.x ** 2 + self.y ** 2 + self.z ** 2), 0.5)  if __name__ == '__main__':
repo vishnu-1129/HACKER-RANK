@@ -1,0 +1,28 @@
+import math
+import os
+import random
+import re
+import sys
+
+if __name__ == '__main__':
+    # Read N (athletes) and M (attributes)
+    nm = input().split()
+    n = int(nm[0])
+    m = int(nm[1])
+
+    # Read the athlete data into a list of lists
+    arr = []
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    # Read the attribute index K to sort by
+    k = int(input())
+
+    # Sort the list using the K-th element of each sub-list as the key
+    # Python's sort is stable, so original order is kept for ties
+    arr.sort(key=lambda x: x[k])
+
+    # Print the resulting table
+    for row in arr:
+        print(*(row))
+ 
