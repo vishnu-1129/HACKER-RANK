@@ -1,0 +1,8 @@
+def print_from_stream(n, stream=None):
+    # If no stream is provided, initialize a NEW EvenStream instance
+    if stream is None:
+        stream = EvenStream()
+        
+    for _ in range(n):
+        print(stream.get_next())
+
