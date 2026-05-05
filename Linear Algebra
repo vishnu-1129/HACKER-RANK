@@ -1,0 +1,11 @@
+import numpy
+
+# Read the dimension N
+n = int(input())
+
+# Read matrix A
+a = numpy.array([input().split() for _ in range(n)], float)
+
+# Compute the determinant and round to 2 decimal places
+print(round(numpy.linalg.det(a), 2))
+
