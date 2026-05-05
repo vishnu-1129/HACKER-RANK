@@ -1,0 +1,14 @@
+import math
+
+# Read inputs as integers
+ab = int(input())
+bc = int(input())
+
+# Calculate the angle in radians using atan(AB/BC)
+# Then convert radians to degrees
+angle_radians = math.atan(ab / bc)
+angle_degrees = math.degrees(angle_radians)
+
+# Round to the nearest integer as per problem requirements
+# and print with the degree symbol (ASCII 176)
+print(f"{round(angle_degrees)}{chr(176)}")
