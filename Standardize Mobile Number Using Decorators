@@ -1,0 +1,10 @@
+def wrapper(f):
+    def fun(l):
+        # Extract the last 10 digits for each number and apply the format: +91 xxxxx xxxxx
+        standardized_list = ["+91 " + c[-10:-5] + " " + c[-5:] for c in l]
+        # Pass the formatted list to the original sorting/printing function
+        return f(standardized_list)
+    return fun
+
+
+
