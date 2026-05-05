@@ -1,0 +1,17 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+# Set legacy print options for specific alignment and spacing
+numpy.set_printoptions(legacy='1.13')
+
+# Read input, split by space, and convert to a NumPy array of floats
+A = numpy.array(input().split(), float)
+
+# Print the floor of each element
+print(numpy.floor(A))
+
+# Print the ceil of each element
+print(numpy.ceil(A))
+
+# Print the rint (round to nearest integer) of each element
+print(numpy.rint(A))
