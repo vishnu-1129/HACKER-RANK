@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import numpy
+
+# Read N (rows) and M (columns)
+n, m = map(int, input().split())
+
+# Read the N rows into a list and convert to a NumPy array
+array = numpy.array([input().split() for _ in range(n)], int)
+
+# Step 1: Calculate the sum along axis 0 (columns)
+sum_axis_0 = numpy.sum(array, axis=0)
+
+# Step 2: Calculate the product of those sums
+result = numpy.prod(sum_axis_0)
+
+print(result)
